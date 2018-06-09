@@ -1,0 +1,46 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"                                
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="./Template.xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:composite="http://java.sun.com/jsf/composite"
+                xmlns:controls="http://java.sun.com/jsf/composite/controls"
+                xmlns:sf="http://simplefaces.org/components"
+                >
+<ui:define name="content"> 
+	
+
+	
+	<ul class="nav nav-tabs">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="#">Simple Example</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link " href="/simplefaces-showcase-war/faces/autocomplete.xhtml">Example with bean and converter</a>
+		  </li>
+	  </ul>
+	<div class="tab-content" id="tabcontent" style="margin:20px">
+	<div class="form-group">
+    <label>Type the name of country-member of EU (France, Italy, Belgium etc)</label>      
+	<sf:autocomplete id="countries" 
+    	 completeMethod="#{autoCompleteSimpleMBean.query}" 
+    	 var="s" 
+    	 itemLabel="#{s}" 
+    	 value="#{autoCompleteSimpleMBean.selectedCountry}" 
+    	 itemValue="#{s}"		      	 	      	    	 
+    	 noSelectionOption="true"    	      	   	 	    			      	 		      	 	  
+    	 >
+    	<f:ajax execute="@form" render="selectedCountry"/> 
+    </sf:autocomplete>    
+  	</div>
+    
+    <div style="margin-top:10px;" />
+        
+    <h:outputLabel id="selectedCountry" value="Selected Value:#{autoCompleteSimpleMBean.selectedCountry!=null?autoCompleteSimpleMBean.selectedCountry:'none'}"  />
+   </div> 	 
+    
+    
+
+</ui:define>        	          	     	 
+
+</ui:composition>

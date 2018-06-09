@@ -1,0 +1,172 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html" template="./Template.xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:controls="http://java.sun.com/jsf/composite/controls"
+	xmlns:sf="http://simplefaces.org/components">
+	<ui:define name="content">
+
+		<div class="panel" style="margin: 20px">
+			<h6>
+				Sample usage
+				<hr />
+			</h6>
+			<pre>
+				<code>
+&lt;sf:autocomplete id="testid" 
+    	 completeMethod="#{sampleBean.completeMethod}" 
+    	 var="s" 
+    	 itemLabel="#{s}" 
+    	 value="#{sampleBean.value}" 
+    	 itemValue="#{s}"		      	 	      	    	 
+    	 noSelectionOption="true"    	      	   	 	    			      	 		      	 	  
+    	 &gt;    	
+    &lt;/sf:autocomplete&gt;       
+</code>
+</pre>
+
+			<h6>
+				Attributes
+				<hr />
+			</h6>
+
+			<table class="table table-striped table-sm">
+				<thead>
+					<tr>
+						<th scope="col">Attribute</th>
+						<th scope="col">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>value</td>
+						<td>The value of the component (expression language)</td>
+					</tr>
+					<tr>
+						<td>style</td>
+						<td>the CSS styles to use for this component.</td>
+					</tr>
+					<tr>
+						<td>styleClass</td>
+						<td>The CSS classes to be applied to this component</td>
+					</tr>
+
+					<tr>
+						<td>converter</td>
+						<td>The name of a javax.faces.convert.Converter class</td>
+					</tr>
+					<tr>
+						<td>var</td>
+						<td>Name of the EL variable used to reference each element of options.</td>
+					</tr>
+					<tr>
+						<td>itemValue</td>
+						<td>An expression language containing containing the parameter set in var attribute, which will be evaluated in order to produce the value of each option</td>
+					</tr>
+					<tr>
+						<td>itemLabel</td>
+						<td>An expression language containing the parameter set in var attribute, which will be evaluated in order to produce the label of each option</td>
+					</tr>
+					<tr>
+						<td>completeMethod</td>
+						<td>The method of the managed bean that will be called to produce the list of options. The signature of the method must be List&lt;Object&gt; methodName(String query)</td>
+					</tr>
+					<tr>
+						<td>minQueryLength</td>
+						<td>The minimum number of input characters in the component, that will fire the completeMethod</td>
+					</tr>
+					<tr>
+						<td>onchange</td>
+						<td>Javascript event handler for when the value is changed.</td>
+					</tr>
+					<tr>
+						<td>size</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>readonly</td>
+						<td>whether the element is read-only.</td>
+					</tr>
+					<tr>
+						<td>optionsStyle</td>
+						<td>CSS that will be applied to the options</td>
+					</tr>
+					<tr>
+						<td>optionsClass</td>
+						<td>CSS classes that will be applied to the options</td>
+					</tr>
+					<tr>
+						<td>noSelectionOption</td>
+						<td>If set to true the a no selection option will be added to the returned options</td>
+					</tr>
+					<tr>
+						<td>rendered</td>
+						<td>If set to false the component will not be rendered, default value is true</td>
+					</tr>
+					<tr>
+						<td>onclick</td>
+						<td>Javascript event handler for when the component is clicked</td>
+					</tr>
+					<tr>
+						<td>ondblclick</td>
+						<td>Javascript event handler for when the component is double clicked</td>
+					</tr>
+					<tr>
+						<td>onfocus</td>
+						<td>Javascript event handler for when the component is focused</td>
+					</tr>
+					<tr>
+						<td>onkeydown</td>
+						<td>An onkeydown Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onkeypress</td>
+						<td>An onkeypress Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onkeyup</td>
+						<td>An onkeyup Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onmousedown</td>
+						<td>An onmousedown Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onmousemove</td>
+						<td>Onmousemove Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onmouseout</td>
+						<td>Onmouseout Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onmouseup</td>
+						<td>An onmouseup Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onreset</td>
+						<td>An onreset Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onselect</td>
+						<td>An onselect Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onchange</td>
+						<td>An onchange Javascript handler.</td>
+					</tr>
+					<tr>
+						<td>onblur</td>
+						<td>An onblur Javascript handler.</td>
+					</tr>
+				</tbody>	
+			</table>
+
+
+
+
+
+		</div>
+	</ui:define>
+</ui:composition>
